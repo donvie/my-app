@@ -1,12 +1,14 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header>
-      <van-nav-bar
-        title="Title"
-        left-text="Back"
-        right-text="Button"
-        left-arrow
-      />
+    <q-header class="bg-transparent" bordered>
+      <!-- <q-toolbar> -->
+        <van-nav-bar
+          title="Title"
+          left-text="Back"
+          right-text="Button"
+          left-arrow
+        />
+      <!-- </q-toolbar> -->
       <!-- @click-left="onClickLeft"
       @click-right="onClickRight" -->
       <!-- <q-toolbar>
@@ -27,14 +29,16 @@
       </q-toolbar> -->
     </q-header>
 
-    <!-- <q-footer>
-      <van-tabbar route>
-        <van-tabbar-item to="/" icon="home-o">Tab</van-tabbar-item>
-        <van-tabbar-item icon="search" dot>Tab</van-tabbar-item>
-        <van-tabbar-item icon="friends-o" badge="5">Tab</van-tabbar-item>
-        <van-tabbar-item icon="setting-o" badge="20">Tab</van-tabbar-item>
-      </van-tabbar>
-    </q-footer> -->
+    <q-footer class="bg-transparent" bordered>
+      <q-toolbar>
+        <van-tabbar route>
+          <van-tabbar-item to="/home" icon="home-o">Tab</van-tabbar-item>
+          <van-tabbar-item icon="search" dot>Tab</van-tabbar-item>
+          <van-tabbar-item to="/checkout" icon="friends-o" badge="5">Tab</van-tabbar-item>
+          <van-tabbar-item to="/profile" icon="setting-o" badge="20">Tab</van-tabbar-item>
+        </van-tabbar>
+      </q-toolbar>
+    </q-footer>
 
     <q-drawer
       v-model="leftDrawerOpen"

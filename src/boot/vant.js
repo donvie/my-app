@@ -25,7 +25,14 @@ import {
   Cell,
   Icon,
   Card,
-  Tag
+  Tag,
+  SubmitBar,
+  CouponCell,
+  CouponList,
+  Popup,
+  SwipeCell,
+  Swipe,
+  SwipeItem
 } from 'vant'
 
 export default boot(({ app }) => {
@@ -50,6 +57,13 @@ export default boot(({ app }) => {
   app.use(Icon)
   app.use(Card)
   app.use(Tag)
+  app.use(SubmitBar)
+  app.use(CouponCell)
+  app.use(CouponList)
+  app.use(Popup)
+  app.use(SwipeCell)
+  app.use(Swipe);
+  app.use(SwipeItem);
   app.use(Lazyload, {
     lazyComponent: true,
   })
