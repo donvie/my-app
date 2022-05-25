@@ -11,7 +11,8 @@ const routes = [
       { path: 'checkout', component: () => import('pages/CheckoutPage.vue') },
       { path: 'cart', component: () => import('pages/CartPage.vue') },
       { path: 'view-product', component: () => import('pages/ViewProductPage.vue') },
-      { path: 'chat', component: () => import('pages/ChatPage.vue') }
+      { path: 'chat', component: () => import('pages/ChatPage.vue') },
+      { path: 'contact-address', component: () => import('pages/ContactAddressPage.vue') }
     ]
   },
 

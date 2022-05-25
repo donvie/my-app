@@ -1,13 +1,20 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-transparent" bordered>
+  <q-layout view="lHh Lpr lFf" class="bg-grey-3">
+    <q-header class="bg-transparent" flat>
       <!-- <q-toolbar> -->
         <van-nav-bar
-          title="Title"
+          title="CakeFizz"
           left-text="Back"
           right-text="Button"
           left-arrow
-        />
+        >
+          <template #left>
+            <van-icon size="24px" name="wap-nav" />
+          </template>
+          <template #right>
+            <van-icon size="24px" name="shopping-cart" />
+          </template>
+        </van-nav-bar>
       <!-- </q-toolbar> -->
       <!-- @click-left="onClickLeft"
       @click-right="onClickRight" -->
@@ -29,18 +36,18 @@
       </q-toolbar> -->
     </q-header>
 
-    <q-footer class="bg-transparent" bordered>
+    <q-footer class="bg-transparent" flat>
       <q-toolbar>
         <van-tabbar route>
-          <van-tabbar-item to="/home" icon="home-o">Tab</van-tabbar-item>
-          <van-tabbar-item icon="search" dot>Tab</van-tabbar-item>
-          <van-tabbar-item to="/checkout" icon="friends-o" badge="5">Tab</van-tabbar-item>
-          <van-tabbar-item to="/profile" icon="setting-o" badge="20">Tab</van-tabbar-item>
+          <van-tabbar-item to="/home" icon="home-o">Home</van-tabbar-item>
+          <van-tabbar-item icon="search" dot>Search</van-tabbar-item>
+          <van-tabbar-item to="/checkout" icon="friends-o" badge="5">Profile</van-tabbar-item>
+          <van-tabbar-item to="/profile" icon="setting-o" badge="20">Settings</van-tabbar-item>
         </van-tabbar>
       </q-toolbar>
     </q-footer>
 
-    <q-drawer
+    <!-- <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
       bordered
@@ -58,7 +65,7 @@
           v-bind="link"
         />
       </q-list>
-    </q-drawer>
+    </q-drawer> -->
 
     <q-page-container>
       <router-view />
@@ -68,7 +75,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+// import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
@@ -119,7 +126,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    // EssentialLink
   },
 
   setup () {

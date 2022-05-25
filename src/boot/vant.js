@@ -32,7 +32,15 @@ import {
   Popup,
   SwipeCell,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Divider,
+  Rate,
+  ActionBar,
+  ActionBarIcon,
+  ActionBarButton,
+  ContactCard,
+  ContactEdit,
+  NoticeBar
 } from 'vant'
 
 export default boot(({ app }) => {
@@ -64,6 +72,14 @@ export default boot(({ app }) => {
   app.use(SwipeCell)
   app.use(Swipe);
   app.use(SwipeItem);
+  app.use(Divider);
+  app.use(Rate);
+  app.use(ActionBar);
+  app.use(ActionBarIcon);
+  app.use(ActionBarButton);
+  app.use(ContactCard);
+  app.use(ContactEdit);
+  app.use(NoticeBar);
   app.use(Lazyload, {
     lazyComponent: true,
   })

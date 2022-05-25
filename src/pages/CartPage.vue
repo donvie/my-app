@@ -1,5 +1,6 @@
 <template>
   <q-page>
+    <van-empty image="error" description="Cart is empty." />
     <van-swipe-cell>
       <van-card
         num="2"
